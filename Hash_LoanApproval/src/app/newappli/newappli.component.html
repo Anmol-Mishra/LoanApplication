@@ -1,0 +1,170 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form #formsearch="ngForm" (ngSubmit)="onSubmit()">
+            <br/>
+            <div id="a">
+                <br/>  
+                <label> First Name</label>
+                <input type="text" [(ngModel)]="person.firstName" name="firstName" maxlength="255" required="">
+                <br/>
+                
+                <label>Middle Name</label>
+                <input type="text" [(ngModel)]="person.middleName" name="middleName" maxlength="255"> 
+                <br/>
+
+                <label>Last Name</label>
+                <input type="text" [(ngModel)]="person.lastName" name="lastName" maxlength="255" required> 
+                <br/>
+
+                <label>Age</label>
+                <input type="text" [(ngModel)]="person.age" name="age" maxlength="255" required> 
+                <br/>
+                
+                <label>Maritial Status </label>
+                <select [(ngModel)]="person.maritial" name="maritial" required>
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Separated">Separated</option>
+                    <option value="Divorced">Divorced</option>
+                    <option value="Widowed">Widowed</option>
+                </select>
+                <br/>
+                <label>Social Security Number </label>
+                <input type="number" name="ssn" [(ngModel)]="person.ssn" required>
+                <br/>
+                <label>Loan Amount </label>
+                <input type="number" name="loanamt" [(ngModel)]="person.loanamt" required>
+                <br/>
+
+                <label>Loan Purpose </label>
+                <select [(ngModel)]="person.loanprp" name="loanprp" required>
+                    <button>Options</button>
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="debt_consolidation">Debt</option>
+                    <option value="educational">Educational Loan</option>
+                    <option value="credit_card">Credit Card</option>
+                    <option value="car">Car Loan</option>
+                    <option value="house">House Loan</option>
+                    <option value="home_improvement">Home Improvement Loan</option>
+                    <option value="major_purchase">Major Purchase Loan</option>
+                    <option value="medical">Medical Loan</option>
+                    <option value="moving">Moving Loan</option>
+                    <option value="renewable_energy">Renewable Energy Loan</option>
+                    <option value="small_business">Small Business Loan</option>
+                    <option value="vacation">Vacation Loan</option>
+                    <option value="wedding">Wedding Loan</option>
+                    <option value="other">Other</option>
+                </select>
+                 
+            </div>
+
+            <br/>
+            <div id="b">
+                <fieldset width="50%">
+                    <legend><strong>Address Information</strong></legend>
+                    <label>Line1</label> 
+                    <input type="text" [(ngModel)]="person.line1" name="line1" maxlength="255" required>
+                    <br/>
+                        
+                    <label>Line2 </label>
+                    <input type="text" [(ngModel)]="person.line2" name="line2" maxlength="255"> 
+                    <br/>
+    
+                    <label>City </label>
+                    <input type="text" [(ngModel)]="person.city" name="city" maxlength="255" required>
+                    <br/>
+    
+                    <label>State </label>
+                    <input type="text" [(ngModel)]="person.state" name="state" maxlength="255" required> 
+                    <br/>
+    
+                    <label>PostalCode</label>
+                    <input type="number" pattern="[0-9]{5}" name="zip" [(ngModel)]="person.zip">
+                    <br/>
+    
+                </fieldset>
+            </div>
+            <div id="c">
+                <fieldset>
+                    <legend><strong>Phone Number</strong></legend>
+                    <br/>
+                    <label>Home </label>
+                    <input type="number" [(ngModel)]="person.phHome" name="phHome" pattern="[0-9]{10}" required> 
+                    <br/>
+                        
+                    <label>Office</label> 
+                    <input type="number" [(ngModel)]="person.phOff" name="phOff" pattern="[0-9]{10}"> 
+                    <br/>
+                        
+                    <label>Mobile</label> 
+                    <input type="number" [(ngModel)]="person.phMob" name="phMob" pattern="[0-9]{10}" required> 
+                    <br/>
+                        
+                    <label>Applicant Email</label> 
+                    <input type="email" name="email" [(ngModel)]="person.email" required> 
+                </fieldset>
+                
+            </div>
+            
+            <br><br/>
+            <div id="d">
+                <label>Description</label> 
+                <input type="text" name="desc" [(ngModel)]="person.desc"> 
+                <br/>
+            </div>
+            
+            
+            <div id="e">
+                <fieldset>
+                    <legend><strong>Employment Details</strong></legend>
+                    <label>Current Employer Name </label>
+                    <input type="text" name="empName" [(ngModel)]="person.empName" required>
+                    <br/>
+                    <label>Work Experience </label>
+                    <input type="number" name="emplen" [(ngModel)]="person.emplen">
+                    <br/> 
+                    <label>Annual Salary </label>
+                    <input type="number" name="annual" [(ngModel)]="person.annual" required> 
+                    <br/>
+                    <label>Designation </label>
+                    <input type="text" [(ngModel)]="person.desig"  name="desig" maxlength="255"> 
+                    <br/>
+        
+                    <label><strong>Current Employer Address</strong></label>
+                    <div >
+                        <label>Line1</label>
+                        <input type="text" [(ngModel)]="person.empline1" name="empline1" maxlength="255" required> 
+                        <br/>
+                        <label>Line2 </label>
+                        <input type="text" [(ngModel)]="person.empline2" name="empline2" maxlength="255"> 
+                        <br/>
+                        <label>City </label>
+                        <input type="text" [(ngModel)]="person.empcity" name="empcity" maxlength="255" required> 
+                        <br/>
+                        <label>State </label>
+                        <input type="text" [(ngModel)]="person.empstate" name="empstate" maxlength="255" required> 
+                        <br/>
+                        <label>Pin Code </label>
+                        <input type="number" [(ngModel)]="person.empzip" name="empzip"  pattern="[0-9]{5}" required> 
+                        <br/>
+                    </div>
+                </fieldset>
+                
+                
+            </div>
+ 
+            <br/>
+
+            <div id="f">
+                <br/>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        
+        
+    </body>
+</html>

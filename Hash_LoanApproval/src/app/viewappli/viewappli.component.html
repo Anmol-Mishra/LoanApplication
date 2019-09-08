@@ -1,0 +1,22 @@
+<div class="card" style="width: 18rem;">
+  
+    <div class="card-body">
+      <h5 class="card-title">Search</h5>
+      <!-- <p class="card-text">Quick sample text to create the card title and make up the body of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      <input type=number placeholder="Enter SSN" [(ngModel)]="ssn" required><p class = card-text>Enter SSN Number</p>
+      <button class="button" (click) = "getCustomer(ssn)">Get me details</button>
+    </div>
+  </div>
+
+  <div *ngIf = "showDetail">
+    <h3>{{customer.firstName}} has a credit score of {{customer.score}}</h3>
+  </div>
+
+  <div *ngIf = "selected">
+    <h3>Congratulations Your application for loan has been approved.</h3>
+  </div>
+  
+  <div *ngIf = "rejected">
+      <h3>Sorry Your application for loan has been rejected.</h3>
+    </div>

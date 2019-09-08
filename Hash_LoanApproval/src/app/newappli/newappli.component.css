@@ -1,0 +1,84 @@
+/* Personal details */
+#a {
+    float: left;
+    width: 50%;
+    position: relative;
+    padding: 2%;
+  }
+  
+  
+  input, select, textarea {
+    width: 65%;
+    padding: 12px;
+    border-style: solid;
+    border-radius: 10px;
+    resize: vertical;
+    float: right;
+  }
+  
+  /* To remove the scroll bar with number input fields */
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button
+  { 
+    -webkit-appearance: none; 
+  }
+  
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  /* Address */
+  #b {
+    float: right;
+    width: 45%;
+    padding: 2%;
+    padding-top: 2%;
+    position: relative;
+    border-style: solid;
+    margin: 2%;
+  }
+  
+  /* Phone Number */
+  #c {
+    float: right;
+    width: 45%;
+    padding: 2%;
+    position: relative;
+    border-style: solid;
+    margin: 2%;
+  }
+  
+  
+  #d {
+    float: left;
+    width: 50%;
+    padding: 2%;
+  }
+  
+  /* Employment details */
+  #e {
+    float: left;
+    width: 50%;
+    position: relative;
+    padding: 2%;
+    border-style: solid;
+  }
+  
+  #f {
+    width: 100%;
+    float: right;
+  }
+  
+  p {
+    float: left;
+  }
+  
+  /*
+  input[required] {
+    background-color: red;
+  }
+  */
+  
+   input:focus:required:invalid {border: 4px solid red;} 
+   

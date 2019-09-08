@@ -1,0 +1,55 @@
+.header img {
+    float: left;
+    width: 300px;
+    height: 100px;
+  }
+  
+  .header h1 {
+    position: relative;
+    top: 18px;
+    left: 10px;
+  }
+  
+  div{font-family: "Times New Roman", Times, serif;}
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+  
+  
+  
+    .active {
+      background-color: #4CAF50;
+    }
+  
+    /* Add a gray right border to all list items, except the last item (last-child) */
+  li {
+      border-right: 1px solid #bbb;
+    }
+    
+    li:last-child {
+      border-right: none;
+    }
+  
+  
+  
+  
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover {
+      background-color: #111;
+    }
